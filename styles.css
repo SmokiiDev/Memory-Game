@@ -1,0 +1,36 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: rgb(26, 61, 61);
+}
+#gameBoard {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 10px;
+  max-width: 1000px;
+  margin: 5rem auto;
+}
+.card {
+  background: #333;
+  cursor: pointer;
+  position: relative;
+  border: 2px solid #555;
+  width: 10rem;
+  height: 10rem;
+  transform: scaleX(1);
+  transition: 0.3s ease-in-out;
+}
+.card.flipped {
+  transform: scaleX(-1);
+}
+.card img {
+  width: 10rem;
+  height: 10rem;
+  display: none;
+}
+.card.flipped img {
+  display: block;
+}
